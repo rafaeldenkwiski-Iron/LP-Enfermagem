@@ -1,0 +1,163 @@
+/* ================= CSS ================= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background: #0077b6;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #90e0ef;
+}
+
+.banner {
+  position: relative;
+  height: 65vh;
+  min-height: 420px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  max-width: 700px;
+}
+
+.title {
+  font-size: 38px;
+  margin-bottom: 10px;
+  animation: fadeUp 1s ease;
+}
+
+.subtitle {
+  font-size: 18px;
+  animation: fadeUp 1.5s ease;
+}
+
+.banner h1 span {
+  color: #90e0ef;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.texto {
+  max-width: 750px;
+  margin: 15px auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.lista {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+  background: white;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #023e8a;
+}
+
+footer {
+  background: #023e8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}

@@ -1,115 +1,303 @@
-<!-- ================= HTML ================= -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso de Enfermagem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Enfermagem | Faculdade São Vicente</title>
+  <meta name="description" content="Graduação em Enfermagem com nota máxima no MEC. Forme-se para atuar com excelência no cuidado à saúde. Inscreva-se agora!">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Favicon padrão (opcional) -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>">
 </head>
 <body>
 
-  <!-- MENU -->
+  <!-- ================= MENU ================= -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre o Curso</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
-        <li><a href="#areas">Áreas de Atuação</a></li>
-      </ul>
-    </nav>
+    <div class="container-header">
+      <div class="logo">
+        <a href="#home">Enfermagem<span>FSV</span></a>
+      </div>
+      
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#areas">Áreas</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- BANNER COM CARROSSEL -->
+  <!-- ================= BANNER PRINCIPAL ================= -->
   <section id="home" class="banner">
     <div class="carousel">
-      <img src="Imagem1Chat.png" class="active">
-      <img src="Imagem2Chat.png">
-      <img src="ImagemCopilot3.png">
+      <img src="Imagem1Chat.png" alt="Profissionais de enfermagem em equipe" class="active" onerror="this.src='https://placehold.co/1920x800/337DBE/white?text=Enfermagem'">
+      <img src="Imagem2Chat.png" alt="Atendimento de enfermagem em hospital" onerror="this.src='https://placehold.co/1920x800/337DBE/white?text=Atendimento+Hospitalar'">
+      <img src="ImagemCopilot3.png" alt="Cuidados de enfermagem em paciente" onerror="this.src='https://placehold.co/1920x800/337DBE/white?text=Cuidados+de+Enfermagem'">
     </div>
 
     <div class="overlay"></div>
 
+    <div class="carousel-dots">
+      <span class="dot active-dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
     <div class="banner-text">
-      <h1 class="title">Graduação em <span>Enfermagem</span></h1>
-      <p class="subtitle">Forme-se para atuar com excelência no cuidado à saúde, com ética, responsabilidade e compromisso com a vida.</p>
+      <!-- Selos de credibilidade -->
+      <div class="selos reveal">
+        <span class="selo"><i class="fas fa-star"></i> Nota 5 no MEC</span>
+        <span class="selo"><i class="fas fa-trophy"></i> 15 anos de excelência</span>
+        <span class="selo"><i class="fas fa-users"></i> +2000 formados</span>
+      </div>
+      
+      <h1 class="title reveal">Graduação em <span>Enfermagem</span></h1>
+      <p class="subtitle reveal reveal-delay-1">Forme-se para atuar com excelência no cuidado à saúde, com ética, responsabilidade e compromisso com a vida.</p>
+      
+      <!-- Botões CTA -->
+      <div class="banner-buttons reveal reveal-delay-2">
+        <a href="#newsletter" class="btn-primary">📝 Inscreva-se Agora</a>
+        <a href="#sobre" class="btn-outline">📄 Saiba Mais</a>
+      </div>
     </div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- ================= SOBRE O CURSO ================= -->
   <section id="sobre">
-    <h2>Sobre o Curso</h2>
-    <p class="texto">
-      O curso de <b>Enfermagem</b> prepara profissionais para atuar de forma completa na área da saúde, desenvolvendo competências na <i>promoção</i>, prevenção e recuperação da saúde.
-      Durante a formação, o estudante vivencia experiências práticas e teóricas que contribuem para a construção de um profissional humano, ético e qualificado.
-    </p>
-
-    <p class="texto">
-      A graduação também proporciona contato com diferentes áreas de atuação, permitindo ao aluno descobrir sua vocação dentro da enfermagem e se destacar no mercado de trabalho.
-    </p>
-  </section>
-
-  <!-- DIFERENCIAIS -->
-  <section id="diferenciais">
-    <h2>Diferenciais do Curso</h2>
-
-    <p class="texto">
-      O curso oferece uma formação completa com foco na prática profissional e na preparação para os desafios reais da área da saúde.
-    </p>
-
-    <ul class="lista">
-      <li>Infraestrutura moderna com laboratórios equipados</li>
-      <li>Professores qualificados e atuantes na área</li>
-      <li>Estágios supervisionados ao longo do curso</li>
-    </ul>
-
-    <a href="https://faculdadesaovicente.edu.br" target="_blank">
-      <button class="btn">Quero saber mais</button>
-    </a>
-  </section>
-
-  <!-- ÁREAS -->
-  <section id="areas">
-    <h2>Áreas de Atuação</h2>
-
-    <p class="texto">
-      O profissional de enfermagem pode atuar em diversas áreas da saúde, contribuindo diretamente para o cuidado e bem-estar da população.
-    </p>
-
-    <div class="grid">
-      <div class="card">
-        <img src="Imagem1Chat.png">
-        <h3>Hospitais e Clínicas</h3>
-        <p>Atuação direta no cuidado ao paciente em ambientes hospitalares, realizando procedimentos, acompanhamento e assistência contínua.</p>
-      </div>
-
-      <div class="card">
-        <img src="Imagem2Chat.png">
-        <h3>Saúde Pública</h3>
-        <p>Trabalho em postos de saúde, campanhas de vacinação e programas de prevenção, promovendo saúde para toda a comunidade.</p>
-      </div>
-
-      <div class="card">
-        <img src="ImagemCopilot4.png">
-        <h3>Unidade de Terapia Intensiva (UTI)</h3>
-        <p>Atuação em unidades de terapia intensiva, com monitoramento constante e cuidados especializados a pacientes em estado crítico.</p>
-      </div>
-
-      <div class="card">
-        <img src="ImagemCopilot3.png">
-        <h3>Atendimento Domiciliar</h3>
-        <p>Cuidados prestados na residência do paciente, garantindo conforto, acompanhamento e qualidade de vida.</p>
+    <div class="container">
+      <h2 class="reveal">Sobre o Curso</h2>
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <p class="texto reveal reveal-delay-1">
+            O curso de <b>Enfermagem</b> prepara profissionais para atuar de forma completa na área da saúde, desenvolvendo competências na <i>promoção</i>, prevenção e recuperação da saúde. Durante a formação, o estudante vivencia experiências práticas e teóricas que contribuem para a construção de um profissional humano, ético e qualificado.
+          </p>
+          <p class="texto reveal reveal-delay-2">
+            A graduação também proporciona contato com diferentes áreas de atuação, permitindo ao aluno descobrir sua vocação dentro da enfermagem e se destacar no mercado de trabalho.
+          </p>
+          <div class="info-curso reveal reveal-delay-3">
+            <div class="info-item"><i class="fas fa-clock"></i> Duração: 4 anos (8 semestres)</div>
+            <div class="info-item"><i class="fas fa-graduation-cap"></i> Bacharelado</div>
+            <div class="info-item"><i class="fas fa-calendar-alt"></i> Início: Fevereiro/Agosto</div>
+          </div>
+        </div>
+        <div class="sobre-card reveal reveal-delay-1">
+          <i class="fas fa-hand-holding-heart"></i>
+          <h3>Diferencial FSV</h3>
+          <p>Mais de 90% dos nossos alunos são contratados antes mesmo de concluir o curso.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- RODAPÉ -->
-  <footer>
-    <p><b>Faculdade São Vicente</b></p>
-    <p>Telefone: (42) 3522-0000</p>
-    <p>Email: contato@faculdadesaovicente.edu.br</p>
-    <p>Site: faculdadesaovicente.edu.br</p>
+  <!-- ================= DIFERENCIAIS ================= -->
+  <section id="diferenciais">
+    <div class="container">
+      <h2 class="reveal">Diferenciais do Curso</h2>
+      <p class="texto reveal reveal-delay-1">O curso oferece uma formação completa com foco na prática profissional e na preparação para os desafios reais da área da saúde.</p>
+
+      <div class="diferenciais-grid">
+        <div class="diferencial-card reveal reveal-delay-1">
+          <div class="diferencial-icon"><i class="fas fa-flask"></i></div>
+          <h3>Laboratórios Modernos</h3>
+          <p>Infraestrutura completa com equipamentos de última geração para simulações realistas.</p>
+        </div>
+        <div class="diferencial-card reveal reveal-delay-2">
+          <div class="diferencial-icon"><i class="fas fa-chalkboard-user"></i></div>
+          <h3>Professores Especialistas</h3>
+          <p>Corpo docente formado por mestres e doutores atuantes no mercado.</p>
+        </div>
+        <div class="diferencial-card reveal reveal-delay-3">
+          <div class="diferencial-icon"><i class="fas fa-hospital-user"></i></div>
+          <h3>Estágios Garantidos</h3>
+          <p>Convênios com mais de 50 hospitais e unidades de saúde.</p>
+        </div>
+        <div class="diferencial-card reveal reveal-delay-1">
+          <div class="diferencial-icon"><i class="fas fa-globe"></i></div>
+          <h3>Intercâmbio Internacional</h3>
+          <p>Parcerias com universidades na Europa e América do Norte.</p>
+        </div>
+      </div>
+      
+      <!-- CTA intermediário -->
+      <div class="cta-intermediario reveal reveal-delay-2">
+        <a href="#newsletter" class="btn-outline">📌 Quero receber mais informações</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ÁREAS DE ATUAÇÃO ================= -->
+  <section id="areas">
+    <div class="container">
+      <h2 class="reveal">Áreas de Atuação</h2>
+      <p class="texto reveal reveal-delay-1">O profissional de enfermagem pode atuar em diversas áreas da saúde, contribuindo diretamente para o cuidado e bem-estar da população.</p>
+
+      <div class="grid">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">🏥</div>
+          <img src="Imagem1Chat.png" alt="Atuação em hospitais e clínicas" onerror="this.src='https://placehold.co/400x250/DFEDF8/337DBE?text=Hospitais'">
+          <h3>Hospitais e Clínicas</h3>
+          <p>Atuação direta no cuidado ao paciente em ambientes hospitalares, realizando procedimentos, acompanhamento e assistência contínua.</p>
+        </div>
+
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">🏛️</div>
+          <img src="Imagem2Chat.png" alt="Saúde pública e campanhas de vacinação" onerror="this.src='https://placehold.co/400x250/DFEDF8/337DBE?text=Saúde+Pública'">
+          <h3>Saúde Pública</h3>
+          <p>Trabalho em postos de saúde, campanhas de vacinação e programas de prevenção, promovendo saúde para toda a comunidade.</p>
+        </div>
+
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon">🫀</div>
+          <img src="ImagemCopilot4.png" alt="Unidade de Terapia Intensiva (UTI)" onerror="this.src='https://placehold.co/400x250/DFEDF8/337DBE?text=UTI'">
+          <h3>Unidade de Terapia Intensiva (UTI)</h3>
+          <p>Atuação em unidades de terapia intensiva, com monitoramento constante e cuidados especializados a pacientes em estado crítico.</p>
+        </div>
+
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">🏡</div>
+          <img src="ImagemCopilot3.png" alt="Atendimento domiciliar de enfermagem" onerror="this.src='https://placehold.co/400x250/DFEDF8/337DBE?text=Home+Care'">
+          <h3>Atendimento Domiciliar</h3>
+          <p>Cuidados prestados na residência do paciente, garantindo conforto, acompanhamento e qualidade de vida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section id="depoimentos">
+    <div class="container">
+      <h2 class="reveal">O que nossos alunos dizem</h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento-card reveal reveal-delay-1">
+          <div class="depoimento-foto"><i class="fas fa-user-circle"></i></div>
+          <p class="depoimento-texto">"Melhor decisão da minha vida! Hoje atuo na UTI de um hospital referência e agradeço todos os dias pela formação que recebi."</p>
+          <h4>Ana Silva</h4>
+          <span>Enfermeira - Turma 2023</span>
+          <div class="depoimento-estrelas">★★★★★</div>
+        </div>
+        <div class="depoimento-card reveal reveal-delay-2">
+          <div class="depoimento-foto"><i class="fas fa-user-circle"></i></div>
+          <p class="depoimento-texto">"Os professores são incríveis e a infraestrutura dos laboratórios me preparou para os desafios reais da profissão."</p>
+          <h4>Carlos Mendes</h4>
+          <span>Enfermeiro - Especialista em UTI</span>
+          <div class="depoimento-estrelas">★★★★★</div>
+        </div>
+        <div class="depoimento-card reveal reveal-delay-3">
+          <div class="depoimento-foto"><i class="fas fa-user-circle"></i></div>
+          <p class="depoimento-texto">"Consegui estágio no segundo semestre e já fui contratada antes mesmo de me formar. O curso abriu todas as portas para mim!"</p>
+          <h4>Mariana Oliveira</h4>
+          <span>Enfermeira - Turma 2024</span>
+          <div class="depoimento-estrelas">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER / CAPTURA ================= -->
+  <section id="newsletter">
+    <div class="container">
+      <div class="newsletter-box reveal">
+        <h2><i class="fas fa-download"></i> Receba o Guia Completo da Carreira de Enfermagem</h2>
+        <p>PDF gratuito com salários, áreas de atuação e mercado de trabalho</p>
+        <form id="form-newsletter" action="#" method="POST">
+          <div class="form-group">
+            <input type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Seu melhor e-mail" required>
+          </div>
+          <button type="submit" class="btn-primary">Quero meu guia grátis →</button>
+        </form>
+        <p class="form-note"><i class="fas fa-lock"></i> Seus dados estão seguros. Não enviamos spam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq">
+    <div class="container">
+      <h2 class="reveal">Perguntas Frequentes</h2>
+      <div class="faq-grid">
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-question">
+            <h3>🎓 Qual a duração do curso?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>O curso tem duração de 4 anos (8 semestres), com aulas teóricas e práticas desde o primeiro ano.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+          <div class="faq-question">
+            <h3>💰 Quanto custa a mensalidade?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>As mensalidades começam em R$ 890,00 com descontos para pagamento à vista. Oferecemos bolsas pelo PROUNI e FIES.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+          <div class="faq-question">
+            <h3>🏥 O curso oferece estágio garantido?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim! Temos convênios com mais de 50 hospitais e unidades de saúde para estágios supervisionados obrigatórios.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+          <div class="faq-question">
+            <h3>📜 O curso é reconhecido pelo MEC?</h3>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Sim! Nosso curso tem nota máxima (5) no MEC e é referência na região.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Faculdade São Vicente</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Rua das Flores, 123 - Centro</p>
+          <p><i class="fas fa-city"></i> Ponta Grossa - PR, 84000-000</p>
+        </div>
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <p><i class="fas fa-phone"></i> <a href="tel:4235220000">(42) 3522-0000</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/554235220000">(42) 9 9999-0000</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:contato@faculdadesaovicente.edu.br">contato@faculdadesaovicente.edu.br</a></p>
+        </div>
+        <div class="footer-col">
+          <h3>Redes Sociais</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Faculdade São Vicente - Todos os direitos reservados</p>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>

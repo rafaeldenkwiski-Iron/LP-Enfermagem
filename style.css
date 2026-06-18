@@ -1,4 +1,3 @@
-/* ================= CSS REFATORADO ================= */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap');
 
 /* ================= VARIÁVEIS GLOBAIS ================= */
@@ -116,6 +115,19 @@ nav a {
 nav a:hover {
   color: var(--light);
   transform: translateY(-2px);
+}
+
+/* ================= LINK DESTAQUE NO MENU ================= */
+.link-destaque {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.link-destaque:hover {
+  background: white;
+  color: var(--primary) !important;
 }
 
 /* ================= BANNER ================= */
@@ -675,6 +687,107 @@ footer {
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
+/* ================= CTA PRINCIPAL ================= */
+#cta-principal {
+  background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
+  padding: 60px 0;
+}
+
+.cta-box {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  padding: 50px 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(51, 125, 190, 0.3);
+  overflow: hidden;
+}
+
+.cta-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.cta-text {
+  flex: 1;
+  color: white;
+}
+
+.cta-text h2 {
+  color: white;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.cta-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.cta-image {
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+.cta-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: block;
+  transition: var(--transition);
+}
+
+.cta-image img:hover {
+  transform: scale(1.02);
+}
+
+.btn-grande {
+  padding: 16px 50px;
+  font-size: 1.1rem;
+  background: white;
+  color: var(--primary);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-grande:hover {
+  background: var(--light);
+  transform: scale(1.05);
+}
+
+/* ================= BOTÃO DESTAQUE ================= */
+.btn-destaque {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-destaque::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.btn-destaque:hover::after {
+  opacity: 1;
+}
+
+.cta-link-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.cta-link-text strong {
+  color: #ffd700;
+}
+
 /* ================= RESPONSIVIDADE ================= */
 @media (max-width: 1024px) and (min-width: 769px) {
   .grid {
@@ -684,6 +797,27 @@ footer {
   .sobre-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cta-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .cta-text h2 {
+    text-align: center;
+  }
+  
+  .cta-text p {
+    text-align: center;
+  }
+  
+  .cta-image {
+    flex: 0 0 auto;
+    max-width: 220px;
   }
 }
 
@@ -781,6 +915,30 @@ footer {
   
   .social-links {
     justify-content: center;
+  }
+  
+  .cta-box {
+    padding: 30px 20px;
+  }
+  
+  .btn-grande {
+    padding: 14px 30px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .cta-image {
+    max-width: 180px;
+  }
+  
+  .link-destaque {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+  }
+  
+  .cta-link-text {
+    font-size: 0.8rem;
   }
   
   /* Remove hover em mobile para evitar problemas de toque */
